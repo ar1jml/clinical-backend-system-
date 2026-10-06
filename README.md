@@ -31,8 +31,8 @@ Features
 
 1️⃣ Clone Repository
 
-git clone https://github.com/yourusername/clinical-backend-system.git
-cd clinical-backend-system
+git clone https://github.com/ar1jml/clinical-backend-system-.git
+cd clinical-backend-system-
 
  2️⃣ Create Virtual Environment
 
@@ -53,6 +53,20 @@ python manage.py runserver
 
 Server runs at:
 http://127.0.0.1:8000/
+
+---
+
+Production Deployment
+
+Gunicorn is included as the WSGI server for Linux-based deployments. Before deploying, configure Django with a private `SECRET_KEY`, set `DEBUG = False`, and define `ALLOWED_HOSTS` for your deployment domain. The current project settings are for local development and are not production-ready.
+
+After configuring production settings and applying migrations, start the application with:
+
+```bash
+gunicorn config.wsgi:application --bind 0.0.0.0:8000
+```
+
+Gunicorn does not support Windows; use `python manage.py runserver` for local development on Windows. This project uses SQLite, so configure persistent storage and backups if deploying it.
 
 ---
 
