@@ -29,15 +29,28 @@ Features
 
 ⚙️ Installation Guide
 
-1️⃣ Clone Repository
+### 1. Clone Repository
 
+```bash
 git clone https://github.com/ar1jml/clinical-backend-system-.git
 cd clinical-backend-system-
+```
 
- 2️⃣ Create Virtual Environment
+### 2. Create and Activate a Virtual Environment
 
+PowerShell:
+
+```powershell
 python -m venv venv
-venv\Scripts\activate
+.\venv\Scripts\Activate.ps1
+```
+
+macOS/Linux:
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
 
  3️⃣ Install Dependencies
 
